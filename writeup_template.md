@@ -6,6 +6,8 @@
 
 [image3]: ./images/extracting.png "extracting"
 
+[image4]: ./images/segmentation.png "segmentation"
+
 ## Project: Perception Pick & Place
 ### Writeup Template: You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
 
@@ -68,7 +70,27 @@ The steps to complete this exercise are the following. I add screenshots of outp
 
 #### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
 
-#### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
+Steps for cluster segmentation have been added to the pcl_callback() function in segmentation.py.
+
+See [segmentation.py](https://github.com/grapestone5321/robond-perception/blob/master/sensor_stick/scripts/segmentation.py)
+
+To build my perception pipeline, I must perform following steps. I add the screenshot of output.
+
+   1. Create a python ros node that subscribes to /sensor_stick/point_cloud topic. Use segmentation.py file found under /sensor_stick/scripts/ to get started.
+
+   2. Use your code from Exercise-1 to apply various filters and segment the table using RANSAC.
+
+   3. Create publishers and topics to publish the segmented table and tabletop objects as separate point clouds.
+
+   4. Apply Euclidean clustering on the table-top objects (after table segmentation is successful).
+
+   5. Create a XYZRGB point cloud such that each cluster obtained from the previous step has its own unique color.
+
+   6. Finally publishmy colored cluster cloud on a separate topic.
+
+![segmentation][image4]
+
+#### 3. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
 Here is an example of how to include an image in your writeup.
 
 ![demo-1](https://user-images.githubusercontent.com/20687560/28748231-46b5b912-7467-11e7-8778-3095172b7b19.png)
