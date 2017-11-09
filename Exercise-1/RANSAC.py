@@ -24,8 +24,6 @@ filename = 'voxel_downsampled.pcd'
 pcl.save(cloud_filtered, filename)
 
 
-
-
 # PassThrough filter
 # Create a PassThrough filter object.
 passthrough = cloud_filtered.make_passthrough_filter()
@@ -36,16 +34,10 @@ passthrough.set_filter_field_name(filter_axis)
 axis_min = 0.6
 axis_max = 1.1
 passthrough.set_filter_limits(axis_min, axis_max)
-
 # Finally use the filter function to obtain the resultant point cloud. 
 cloud_filtered = passthrough.filter()
 filename = 'pass_through_filtered.pcd'
 pcl.save(cloud_filtered, filename)
-
-
-
-
-
 
 
 # RANSAC plane segmentation
@@ -66,16 +58,10 @@ seg.set_distance_threshold(max_distance)
 inliers, coefficients = seg.segment()
 
 
-
-
-
-
 # Extract inliers
 extracted_inliers = cloud_filtered.extract(inliers, negative=False)
 filename = 'extracted_inliers.pcd'
 pcl.save(extracted_inliers, filename)
-
-
 
 
 
@@ -87,7 +73,6 @@ pcl.save(extracted_inliers, filename)
 extracted_outliers = cloud_filtered.extract(inliers, negative=True)
 filename = 'extracted_outliers.pcd'
 pcl.save(extracted_outliers, filename)
-
 
 
 # Save pcd for tabletop objects
@@ -107,5 +92,3 @@ outlier_filter.set_std_dev_mul_thresh(x)
 
 # Finally call the filter function for magic
 cloud_filtered = outlier_filter.filter()
-
-
