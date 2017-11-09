@@ -40,6 +40,8 @@ The writeup includes a statement and supporting figures / images that explain ho
 
 The pcl_callback() function within RANSAC.py has been filled out to include filtering and RANSAC plane fitting.
 
+See [RANSAC.py](https://github.com/grapestone5321/robond-perception/blob/master/Exercise-1/RANSAC.py)
+
 #### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
 
 #### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
