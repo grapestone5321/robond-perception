@@ -2,6 +2,10 @@
 
 [image1]: ./images/downsampling.png "downsampling"
 
+[image2]: ./images/pass_through.png "pass_through"
+
+[image3]: ./images/extracting.png "extracting"
+
 ## Project: Perception Pick & Place
 ### Writeup Template: You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
 
@@ -54,9 +58,13 @@ The steps to complete this exercise are the following. I add screenshots of outp
 
 2. Apply a Pass Through Filter to isolate the table and objects.
 
+![pass_through][image2]
+
 3. Perform RANSAC plane fitting to identify the table.
 
 4. Use the ExtractIndices Filter to create new point clouds containing the table and objects separately.
+
+![extracting][image3]
 
 #### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
 
