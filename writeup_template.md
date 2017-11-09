@@ -52,17 +52,17 @@ See [RANSAC.py](https://github.com/grapestone5321/robond-perception/blob/master/
 
 The steps to complete this exercise are the following. I add screenshots of output.
 
-1. Downsample my point cloud by applying a Voxel Grid Filter.
+   1. Downsample my point cloud by applying a Voxel Grid Filter.
 
 ![downsampling][image1]
 
-2. Apply a Pass Through Filter to isolate the table and objects.
+   2. Apply a Pass Through Filter to isolate the table and objects.
 
 ![pass_through][image2]
 
-3. Perform RANSAC plane fitting to identify the table.
+   3. Perform RANSAC plane fitting to identify the table.
 
-4. Use the ExtractIndices Filter to create new point clouds containing the table and objects separately.
+   4. Use the ExtractIndices Filter to create new point clouds containing the table and objects separately.
 
 ![extracting][image3]
 
