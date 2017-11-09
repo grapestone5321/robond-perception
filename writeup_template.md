@@ -38,6 +38,8 @@ The writeup includes a statement and supporting figures / images that explain ho
 ### Exercise 1, 2 and 3 pipeline implemented
 #### 1. Complete Exercise 1 steps. Pipeline for filtering and RANSAC plane fitting implemented.
 
+The pcl_callback() function within RANSAC.py has been filled out to include filtering and RANSAC plane fitting.
+
 #### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
 
 #### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
