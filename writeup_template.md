@@ -8,6 +8,18 @@
 
 [image4]: ./images/segmentation.png "segmentation"
 
+[image5]: ./images/confusion_matrix_1.png "confusion_matrix_1"
+
+[image6]: ./images/object_recognition_1.png "object_recognition_1"
+
+[image7]: ./images/confusion_matrix_2.png "confusion_matrix_2"
+
+[image8]: ./images/object_recognition_2.png "object_recognition_2"
+
+[image9]: ./images/object_recognition_3.png "object_recognition_3"
+
+[image10]: ./images/object_recognition_4.png "object_recognition_4"
+
 ## Project: Perception Pick & Place
 ### Writeup Template: You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
 
@@ -50,7 +62,7 @@ The writeup includes a statement and supporting figures / images that explain ho
 
 The pcl_callback() function within RANSAC.py has been filled out to include filtering and RANSAC plane fitting.
 
-See [RANSAC.py](https://github.com/grapestone5321/robond-perception/blob/master/Exercise-1/RANSAC.py)
+- See [RANSAC.py](https://github.com/grapestone5321/robond-perception/blob/master/Exercise-1/RANSAC.py)
 
 The steps to complete this exercise are the following. I add screenshots of output.
 
@@ -72,7 +84,7 @@ The steps to complete this exercise are the following. I add screenshots of outp
 
 Steps for cluster segmentation have been added to the pcl_callback() function in segmentation.py.
 
-See [segmentation.py](https://github.com/grapestone5321/robond-perception/blob/master/sensor_stick/scripts/segmentation.py)
+- See [segmentation.py](https://github.com/grapestone5321/robond-perception/blob/master/sensor_stick/scripts/segmentation.py)
 
 To build my perception pipeline, I must perform following steps. I add the screenshot of output.
 
@@ -91,17 +103,44 @@ To build my perception pipeline, I must perform following steps. I add the scree
 ![segmentation][image4]
 
 #### 3. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
-Here is an example of how to include an image in your writeup.
 
-![demo-1](https://user-images.githubusercontent.com/20687560/28748231-46b5b912-7467-11e7-8778-3095172b7b19.png)
+Both compute_color_histograms() and compute_normal_histograms() functions within features.py in /sensor_stick/src/sensor_stick have been filled out and SVM has been trained using train_svm.py.
+
+- See [features.py](https://github.com/grapestone5321/robond-perception/blob/master/sensor_stick/src/sensor_stick/features.py)
+
+- See [train_svm.py](https://github.com/grapestone5321/robond-perception/blob/master/sensor_stick/scripts/train_svm.py)
+
+I provide a snapshot of my normalized confusion matrix output from train_svm.py.
+
+![confusion_matrix_1][image5]
+
+Object recognition steps have been implemented in the pcl_callback() function within capture_features.py. I add the screenshot of output.
+
+![object_recognition_1][image6]
 
 ### Pick and Place Setup
 
 #### 1. For all three tabletop setups (`test*.world`), perform object recognition, then read in respective pick list (`pick_list_*.yaml`). Next construct the messages that would comprise a valid `PickPlace` request output them to `.yaml` format.
 
-And here's another image! 
-![demo-2](https://user-images.githubusercontent.com/20687560/28748286-9f65680e-7468-11e7-83dc-f1a32380b89c.png)
+![confusion_matrix_2][image7]
 
-Spend some time at the end to discuss your code, what techniques you used, what worked and why, where the implementation might fail and how you might improve it if you were going to pursue this project further.  
+I add the functionality to my already existing ros node that communicates with my perception pipeline to perform sequential object recognition.
 
+- See [project.py](https://github.com/grapestone5321/robond-perception/blob/master/pr2_robot/scripts/project.py)
+
+I save my PickPlace requests into output_1.yaml, output_2.yaml, and output_3.yaml for each scene respectively.
+
+- See [output_1.yaml](https://github.com/grapestone5321/robond-perception/blob/master/output/output_1.yaml)
+
+- See [output_2.yaml](https://github.com/grapestone5321/robond-perception/blob/master/output/output_2.yaml)
+
+- See [output_3.yaml](https://github.com/grapestone5321/robond-perception/blob/master/output/output_3.yaml)
+
+I add screenshots of output showing label markers in RViz to demonstrate my object recognition success rate in each of the three scenarios. My pipeline correctly identify 100% of objects in test1.world, 100% (5/5) in test2.world and 75% (6/8) in test3.world.
+
+![object_recognition_2][image8]
+
+![object_recognition_3][image9]
+
+![object_recognition_4][image10]
 
