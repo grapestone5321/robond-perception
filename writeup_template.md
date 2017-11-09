@@ -31,7 +31,9 @@
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  
 
-You're reading it!
+I provide a Writeup that includes all the rubric points and how I addressed each one.
+
+The writeup includes a statement and supporting figures / images that explain how each rubric item was addressed, and specifically where in the code each step was handled. The writeup includes a discussion of what worked, what didn't and how the project implementation could be improved going forward.
 
 ### Exercise 1, 2 and 3 pipeline implemented
 #### 1. Complete Exercise 1 steps. Pipeline for filtering and RANSAC plane fitting implemented.
