@@ -1,3 +1,7 @@
+[//]: # (Image References)
+
+[image1]: ./images/downsampling.png "downsampling"
+
 ## Project: Perception Pick & Place
 ### Writeup Template: You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
 
@@ -41,6 +45,18 @@ The writeup includes a statement and supporting figures / images that explain ho
 The pcl_callback() function within RANSAC.py has been filled out to include filtering and RANSAC plane fitting.
 
 See [RANSAC.py](https://github.com/grapestone5321/robond-perception/blob/master/Exercise-1/RANSAC.py)
+
+The steps to complete this exercise are the following. I add screenshots of output.
+
+1. Downsample my point cloud by applying a Voxel Grid Filter.
+
+![downsampling][image1]
+
+2. Apply a Pass Through Filter to isolate the table and objects.
+
+3. Perform RANSAC plane fitting to identify the table.
+
+4. Use the ExtractIndices Filter to create new point clouds containing the table and objects separately.
 
 #### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
 
