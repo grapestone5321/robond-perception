@@ -8,11 +8,11 @@
 
 [image4]: ./images/segmentation.png "segmentation"
 
-[image5]: ./images/confusion_matrix_1.png "confusion_marix_1"
+[image5]: ./images/confusion_marix_1.png "confusion_marix_1"
 
 [image6]: ./images/object_recognition_1.png "object_recognition_1"
 
-[image7]: ./images/confusion_matrix_2.png "confusion_marix_2"
+[image7]: ./images/confusion_marix_2.png "confusion_marix_2"
 
 [image8]: ./images/object_recognition_2.png "object_recognition_2"
 
