@@ -8,11 +8,11 @@
 
 [image4]: ./images/segmentation.png "segmentation"
 
-[image5]: ./images/confusion_matrix_1.png "confusion_matrix_1"
+[image5]: ./images/confusion_matrix_1.png "confusion_marix_1"
 
 [image6]: ./images/object_recognition_1.png "object_recognition_1"
 
-[image7]: ./images/confusion_matrix_2.png "confusion_matrix_2"
+[image7]: ./images/confusion_matrix_2.png "confusion_marix_2"
 
 [image8]: ./images/object_recognition_2.png "object_recognition_2"
 
@@ -77,9 +77,7 @@ The steps to complete this exercise are the following. I add screenshots of outp
    3. Perform RANSAC plane fitting to identify the table.
 
    4. Use the ExtractIndices Filter to create new point clouds containing the table and objects separately.
-
 ![extracting][image3]
-
 #### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
 
 Steps for cluster segmentation have been added to the pcl_callback() function in segmentation.py.
@@ -91,7 +89,6 @@ To build my perception pipeline, I must perform following steps. I add the scree
    1. Create a python ros node that subscribes to /sensor_stick/point_cloud topic. Use segmentation.py file found under /sensor_stick/scripts/ to get started.
 
    2. Use your code from Exercise-1 to apply various filters and segment the table using RANSAC.
-
    3. Create publishers and topics to publish the segmented table and tabletop objects as separate point clouds.
 
    4. Apply Euclidean clustering on the table-top objects (after table segmentation is successful).
@@ -112,7 +109,7 @@ Both compute_color_histograms() and compute_normal_histograms() functions within
 
 I provide a snapshot of my normalized confusion matrix output from train_svm.py.
 
-![confusion_matrix_1][image5]
+![confusion_marix_1][image5]
 
 Object recognition steps have been implemented in the pcl_callback() function within capture_features.py. I add the screenshot of output.
 
@@ -122,7 +119,7 @@ Object recognition steps have been implemented in the pcl_callback() function wi
 
 #### 1. For all three tabletop setups (`test*.world`), perform object recognition, then read in respective pick list (`pick_list_*.yaml`). Next construct the messages that would comprise a valid `PickPlace` request output them to `.yaml` format.
 
-![confusion_matrix_2][image7]
+![confusion_marix_2][image7]
 
 I add the functionality to my already existing ros node that communicates with my perception pipeline to perform sequential object recognition.
 
