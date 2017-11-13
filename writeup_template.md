@@ -113,6 +113,10 @@ I provide a snapshot of my normalized confusion matrix output from train_svm.py.
 
 Object recognition steps have been implemented in the pcl_callback() function within capture_features.py. I add the screenshot of output.
 
+- See [capture_features.py](https://github.com/grapestone5321/robond-perception/blob/master/sensor_stick/scripts/capture_features.py)
+
+- See [object recognition.py](https://github.com/grapestone5321/robond-perception/blob/master/sensor_stick/scripts/object_recognition.py)
+
 ![object_recognition_1][image6]
 
 ### Pick and Place Setup
