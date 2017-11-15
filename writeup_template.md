@@ -123,6 +123,8 @@ Object recognition steps have been implemented in the pcl_callback() function wi
 
 #### 1. For all three tabletop setups (`test*.world`), perform object recognition, then read in respective pick list (`pick_list_*.yaml`). Next construct the messages that would comprise a valid `PickPlace` request output them to `.yaml` format.
 
+I provide a snapshot of my normalized confusion matrix output from train_svm.py.
+
 ![confusion_marix_2][image7]
 
 I add the functionality to my already existing ros node that communicates with my perception pipeline to perform sequential object recognition.
@@ -139,9 +141,15 @@ I save my PickPlace requests into output_1.yaml, output_2.yaml, and output_3.yam
 
 I add screenshots of output showing label markers in RViz to demonstrate my object recognition success rate in each of the three scenarios. My pipeline correctly identify 100% of objects in test1.world, 100% (5/5) in test2.world and 75% (6/8) in test3.world.
 
+test1.world:
+
 ![object_recognition_2][image8]
 
+test2.world:
+
 ![object_recognition_3][image9]
+
+test3.world:
 
 ![object_recognition_4][image10]
 
